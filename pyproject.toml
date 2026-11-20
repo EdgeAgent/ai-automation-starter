@@ -1,0 +1,166 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-automation-starter-kit"
+version = "0.1.0"
+description = "A modular, latest-compatible Python dependency toolkit for AI automation and services."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Kevin Doherty" }]
+keywords = ["ai", "automation", "python", "agents", "fastapi", "developer-tools"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "pydantic",
+  "pydantic-settings",
+  "python-dotenv",
+  "httpx",
+  "tenacity",
+  "structlog",
+  "typer",
+  "rich",
+]
+
+[project.optional-dependencies]
+providers = [
+  "openai",
+  "anthropic",
+  "google-genai",
+  "litellm",
+]
+frameworks = [
+  "langchain",
+  "langgraph",
+  "llama-index-core",
+]
+automation = [
+  "requests",
+  "beautifulsoup4",
+  "lxml",
+  "playwright",
+]
+server = [
+  "fastapi",
+  "uvicorn[standard]",
+  "gunicorn",
+  "sqlalchemy",
+  "alembic",
+  "redis",
+  "celery",
+  "prometheus-client",
+  "sentry-sdk",
+  "opentelemetry-api",
+  "opentelemetry-sdk",
+  "opentelemetry-instrumentation-fastapi",
+]
+data = [
+  "pandas",
+  "polars",
+  "duckdb",
+  "pyarrow",
+]
+vector = [
+  "chromadb",
+  "qdrant-client",
+  "pgvector",
+  "weaviate-client",
+]
+documents = [
+  "pypdf",
+  "python-docx",
+  "openpyxl",
+  "xlsxwriter",
+  "python-pptx",
+]
+workflows = [
+  "apscheduler",
+  "prefect",
+]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "ruff",
+  "mypy",
+  "pre-commit",
+]
+ml = [
+  "torch",
+  "transformers",
+  "sentence-transformers",
+]
+all = [
+  "pydantic",
+  "pydantic-settings",
+  "python-dotenv",
+  "httpx",
+  "tenacity",
+  "structlog",
+  "typer",
+  "rich",
+  "openai",
+  "anthropic",
+  "google-genai",
+  "litellm",
+  "langchain",
+  "langgraph",
+  "llama-index-core",
+  "requests",
+  "beautifulsoup4",
+  "lxml",
+  "playwright",
+  "fastapi",
+  "uvicorn[standard]",
+  "gunicorn",
+  "sqlalchemy",
+  "alembic",
+  "redis",
+  "celery",
+  "prometheus-client",
+  "sentry-sdk",
+  "opentelemetry-api",
+  "opentelemetry-sdk",
+  "opentelemetry-instrumentation-fastapi",
+  "pandas",
+  "polars",
+  "duckdb",
+  "pyarrow",
+  "chromadb",
+  "qdrant-client",
+  "pgvector",
+  "weaviate-client",
+  "pypdf",
+  "python-docx",
+  "openpyxl",
+  "xlsxwriter",
+  "python-pptx",
+  "apscheduler",
+  "prefect",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_automation_starter"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+strict = true

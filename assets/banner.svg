@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 440" role="img" aria-labelledby="title desc">
+  <title id="title">AI Automation Starter Kit</title>
+  <desc id="desc">A modular Python toolkit for AI automations, agents, APIs, and data workflows.</desc>
+  <defs>
+    <linearGradient id="background" x1="42" y1="30" x2="1364" y2="412" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10172D"/>
+      <stop offset=".55" stop-color="#122541"/>
+      <stop offset="1" stop-color="#102B3D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="122" y1="140" x2="800" y2="376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5EEAD4"/>
+      <stop offset=".55" stop-color="#5BBDF6"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="orb" x1="1040" y1="71" x2="1328" y2="364" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F547A" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#473A78" stop-opacity=".35"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#A8C6E8" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="440" rx="28" fill="url(#background)"/>
+  <rect width="1400" height="440" rx="28" fill="url(#grid)"/>
+  <ellipse cx="1200" cy="219" rx="188" ry="168" fill="#35D8D0" fill-opacity=".10" filter="url(#blur)"/>
+  <circle cx="1192" cy="220" r="155" fill="url(#orb)" stroke="#72C8D8" stroke-opacity=".26" stroke-width="2"/>
+  <circle cx="1192" cy="220" r="119" fill="none" stroke="#8ECFE4" stroke-opacity=".20" stroke-width="1.5" stroke-dasharray="5 11"/>
+  <g fill="none" stroke="url(#accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" opacity=".95">
+    <path d="M1192 91v53M1101 128l40 40M1283 128l-40 40M1063 220h57M1321 220h-57M1101 312l40-40M1283 312l-40-40M1192 349v-53"/>
+    <path d="m1149 273 43-105 43 105M1165 238h54" stroke-width="8"/>
+  </g>
+  <g fill="#F0FAFF" stroke="#142943" stroke-width="5">
+    <circle cx="1192" cy="87" r="10"/><circle cx="1097" cy="124" r="10"/><circle cx="1287" cy="124" r="10"/>
+    <circle cx="1059" cy="220" r="10"/><circle cx="1325" cy="220" r="10"/><circle cx="1097" cy="316" r="10"/>
+    <circle cx="1287" cy="316" r="10"/><circle cx="1192" cy="353" r="10"/>
+  </g>
+  <g fill="#82E9DD" opacity=".72">
+    <circle cx="1002" cy="117" r="3"/><circle cx="1350" cy="153" r="3"/><circle cx="1003" cy="320" r="3"/>
+    <circle cx="1329" cy="365" r="3"/><circle cx="1063" cy="66" r="2.5"/><circle cx="1352" cy="270" r="2.5"/>
+  </g>
+  <g transform="translate(82 87)">
+    <rect x="0" y="0" width="8" height="248" rx="4" fill="url(#accent)"/>
+    <text x="40" y="52" fill="#8FE9DF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="700" letter-spacing="4">PYTHON TOOLKIT  /  01</text>
+    <text x="40" y="120" fill="#F5F8FF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="50" font-weight="750" letter-spacing="-1.2">AI Automation</text>
+    <text x="40" y="180" fill="#F5F8FF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="50" font-weight="750" letter-spacing="-1.2">Starter Kit</text>
+    <text x="42" y="223" fill="#C0CEE1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="19" font-weight="450">Build AI services without rebuilding your Python toolbox.</text>
+    <g transform="translate(42 258)" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="650" letter-spacing="1.2">
+      <rect width="114" height="30" rx="15" fill="#FFFFFF" fill-opacity=".08" stroke="#75DCCF" stroke-opacity=".45"/>
+      <text x="57" y="20" fill="#BDF7EE" text-anchor="middle">MODULAR</text>
+      <rect x="126" width="165" height="30" rx="15" fill="#FFFFFF" fill-opacity=".08" stroke="#7CBCEB" stroke-opacity=".45"/>
+      <text x="208.5" y="20" fill="#C8E8FF" text-anchor="middle">PYTHON 3.11+</text>
+      <rect x="303" width="196" height="30" rx="15" fill="#FFFFFF" fill-opacity=".08" stroke="#AA91F1" stroke-opacity=".5"/>
+      <text x="401" y="20" fill="#DED2FF" text-anchor="middle">LATEST COMPATIBLE</text>
+    </g>
+  </g>
+</svg>
