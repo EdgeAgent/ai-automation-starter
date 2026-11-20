@@ -13,6 +13,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/EdgeAgent/ai-automation-starter/actions/workflows/ci.yml"><img src="https://github.com/EdgeAgent/ai-automation-starter/actions/workflows/ci.yml/badge.svg" alt="GitHub Actions CI"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white" alt="Python 3.11 or newer"></a>
   <a href="https://pypi.org/project/pip/"><img src="https://img.shields.io/badge/Install-pip%20%7C%20uv-0A7BBB?logo=pypi&logoColor=white" alt="Install with pip or uv"></a>
   <img src="https://img.shields.io/badge/Optional%20profiles-11-6554C0" alt="Eleven optional install profiles">
@@ -58,11 +59,11 @@ The core foundation is installed by default. The other groups are optional extra
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/ai-automation-starter.git
+git clone https://github.com/EdgeAgent/ai-automation-starter.git
 cd ai-automation-starter
 ```
 
-Replace `YOUR-USERNAME` with the GitHub account that hosts the repository. If you are using a downloaded copy, open a terminal in the repository folder instead.
+This repository is private, so your GitHub account must have access to clone it. If you are using the ZIP download, extract it and open a terminal in the repository folder instead.
 
 ### 2. Create and activate a virtual environment
 
@@ -183,22 +184,9 @@ pytest
 
 Please keep the default install lean, put specialized or heavyweight tools in their own profile, and update the profile table and tests when changing package groups. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-## Publish this repository on GitHub
+## Repository
 
-This working copy is ready to push, but it does not yet have a GitHub remote. To publish it:
-
-1. Create a new empty repository on GitHub named `ai-automation-starter`. Do not initialize it with a README, license, or `.gitignore`, because those files are already present here.
-2. From this repository folder, add and commit the files. If you started from the ZIP download rather than this Git working copy, initialize Git first with `git init -b main`.
-3. Replace `YOUR-USERNAME` below with your GitHub account name, then push:
-
-   ```bash
-   git add .
-   git commit -m "Initial commit: AI Automation Starter Kit"
-   git remote add origin https://github.com/YOUR-USERNAME/ai-automation-starter.git
-   git push -u origin main
-   ```
-
-After the push, GitHub Actions will run the Python CI checks and Dependabot can open weekly dependency-update pull requests.
+The source lives in the private GitHub repository [`EdgeAgent/ai-automation-starter`](https://github.com/EdgeAgent/ai-automation-starter). The project has not been published to PyPI; install it by cloning the repository and using the editable install commands above. GitHub Actions runs CI on pushes and pull requests, while Dependabot proposes weekly dependency updates.
 
 ## License
 
