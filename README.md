@@ -63,7 +63,7 @@ git clone https://github.com/EdgeAgent/ai-automation-starter.git
 cd ai-automation-starter
 ```
 
-This repository is private, so your GitHub account must have access to clone it. If you are using the ZIP download, extract it and open a terminal in the repository folder instead.
+This repository is public, so anyone can clone it. If you are using the ZIP download, extract it and open a terminal in the repository folder instead.
 
 ### 2. Create and activate a virtual environment
 
@@ -186,7 +186,7 @@ Please keep the default install lean, put specialized or heavyweight tools in th
 
 ## Repository
 
-The source lives in the private GitHub repository [`EdgeAgent/ai-automation-starter`](https://github.com/EdgeAgent/ai-automation-starter). The project has not been published to PyPI; install it by cloning the repository and using the editable install commands above. GitHub Actions runs CI on pushes and pull requests, while Dependabot proposes weekly dependency updates.
+The source lives in the public GitHub repository [`EdgeAgent/ai-automation-starter`](https://github.com/EdgeAgent/ai-automation-starter). The project has not been published to PyPI; install it by cloning the repository and using the editable install commands above. GitHub Actions runs CI on pushes and pull requests, while Dependabot proposes weekly dependency updates.
 
 ## License
 
