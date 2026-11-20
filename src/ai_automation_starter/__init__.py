@@ -1,3 +1,3 @@
-"""Dependency-profile metadata for the AI Automation Starter Kit."""
+"""AI Automation Starter Kit package metadata and command-line tools."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

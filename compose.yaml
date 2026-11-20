@@ -1,0 +1,49 @@
+services:
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    command: ["uvicorn", "examples.server.app:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    environment:
+      AI_STARTER_API_TOKEN: "${AI_STARTER_API_TOKEN:?Set AI_STARTER_API_TOKEN in .env}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY:?Set OPENAI_API_KEY in .env}"
+      AI_STARTER_MODEL: "${AI_STARTER_MODEL:-gpt-4o-mini}"
+      AI_STARTER_REDIS_URL: redis://redis:6379/0
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz', timeout=2)"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  worker:
+    build: .
+    command: ["celery", "-A", "examples.server.worker.celery_app", "worker", "--loglevel=INFO", "--concurrency=2"]
+    environment:
+      AI_STARTER_API_TOKEN: "${AI_STARTER_API_TOKEN:?Set AI_STARTER_API_TOKEN in .env}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY:?Set OPENAI_API_KEY in .env}"
+      AI_STARTER_MODEL: "${AI_STARTER_MODEL:-gpt-4o-mini}"
+      AI_STARTER_REDIS_URL: redis://redis:6379/0
+    depends_on:
+      redis:
+        condition: service_healthy
+
+volumes:
+  redis-data:

@@ -15,7 +15,7 @@ Use Python 3.11 or newer, then run from the repository root:
 ```bash
 python -m venv .venv
 # Activate .venv for your shell, then:
-python -m pip install -e ".[server,dev]"
+python -m pip install -e ".[openai,server,dev]"
 ruff check .
 ruff format --check .
 pytest
