@@ -22,6 +22,8 @@
 
 **Start with one install, add only the stack you need, and run a real example.** The repository provides a small default Python foundation, focused optional dependency profiles, an `ai-starter` diagnostics CLI, and a runnable FastAPI + Redis/Celery + OpenAI job service.
 
+> **Step 2 →** Ready to build working agents on this foundation? Continue with [ai-automation-agents](https://github.com/EdgeAgent/ai-automation-agents) — twelve production-pattern agent recipes with routing, memory, pipelines, and approval gates.
+
 > This is a starter project, not a hosted service or a turnkey production deployment. It installs Python packages and provides a tested example; Docker, Redis, provider accounts, credentials, infrastructure security, and production operations remain your responsibility.
 
 ## What you can do
